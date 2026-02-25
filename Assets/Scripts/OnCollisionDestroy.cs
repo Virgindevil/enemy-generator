@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestroyByColliderCheck : MonoBehaviour
+public class OnCollisionDestroy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {

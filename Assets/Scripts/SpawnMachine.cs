@@ -15,9 +15,7 @@ public class SpawnMachine : MonoBehaviour
 
     [SerializeField] private Transform[] _manualSpawnPoints;
 
-
     private List<Transform> _spawnPoints = new();
-
 
     private void Start()
     {
@@ -53,7 +51,7 @@ public class SpawnMachine : MonoBehaviour
                 _spawnPoint,
                 new Vector3(x, y, 0),
                 Quaternion.identity,
-                this.transform);
+                transform);
 
             newObject.name = $"SpawnPoint_{i}";
 
@@ -86,6 +84,6 @@ public class SpawnMachine : MonoBehaviour
             _enemyPrefab,
             spawnPoint.position,
             spawnPoint.rotation,
-            this.transform);
+            transform);
     }
 }

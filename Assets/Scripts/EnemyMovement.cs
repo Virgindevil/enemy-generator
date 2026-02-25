@@ -11,10 +11,9 @@ public class EnemyMovement : MonoBehaviour
         _transform = transform;
         _targetTrasform = GetComponentInParent<SpawnMachine>().transform;
     }
-
     
-    void FixedUpdate()
+    void Update()
     {
-        _transform.position = Vector3.MoveTowards(_transform.position, _targetTrasform.position, _speed * Time.fixedDeltaTime);
+        _transform.position = Vector3.MoveTowards(_transform.position, _targetTrasform.position, _speed * Time.deltaTime);
     }
 }
